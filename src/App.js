@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-function App() {
+export default function BasicExample() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link bg-white rounded-lg p-6"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <CreateRoom />
+        </Route>
+        <Route path="/room/:id">
+          <RingRoom />
+        </Route>
+      </Switch>
+    </Router>
+  );
+}
+
+function CreateRoom() {
+  return (
+    <div>
+      <h2>CreateRoom</h2>
     </div>
   );
 }
 
-export default App;
+function RingRoom() {
+  return (
+    <div>
+      <h2>RingRoom</h2>
+    </div>
+  );
+}
