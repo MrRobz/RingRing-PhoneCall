@@ -4,6 +4,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import "./index.scss"
+import CreateRoom from './components/create-room/CreateRoom';
 
 export default function BasicExample() {
   return (
@@ -17,14 +19,6 @@ export default function BasicExample() {
         </Route>
       </Switch>
     </Router>
-  );
-}
-
-function CreateRoom() {
-  return (
-    <div>
-      <h2>CreateRoom</h2>
-    </div>
   );
 }
 
