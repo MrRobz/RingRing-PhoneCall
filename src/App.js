@@ -12,12 +12,8 @@ export default function BasicExample() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <CreateRoom />
-        </Route>
-        <Route path="/room/:id">
-          <RingRoom />
-        </Route>
+        <Route exact path="/" component={ CreateRoom }/>
+        <Route path="/room/:id" component={ RingRoom }/>
       </Switch>
     </Router>
   );
