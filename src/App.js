@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./index.scss"
 import CreateRoom from './components/create-room/CreateRoom';
+import RingRoom from './components/ring-room/RingRoom';
 
 export default function BasicExample() {
   return (
@@ -19,13 +20,5 @@ export default function BasicExample() {
         </Route>
       </Switch>
     </Router>
-  );
-}
-
-function RingRoom() {
-  return (
-    <div>
-      <h2>RingRoom</h2>
-    </div>
   );
 }
