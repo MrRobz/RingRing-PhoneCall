@@ -15,9 +15,6 @@
     "react-scripts": "3.3.1"
   },
   "scripts": {
-    "build:styles": "postcss tailwind.css -o src/styles.css",
-    "prebuild": "NODE_ENV=production yarn build:styles",
-    "prestart": "yarn build:styles",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,7 +37,6 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.6",
-    "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.2.0"
+    "postcss-cli": "^7.1.0"
   }
 }
