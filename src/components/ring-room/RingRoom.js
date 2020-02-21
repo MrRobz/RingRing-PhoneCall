@@ -10,6 +10,7 @@ import {
   Typography,
   IconButton
 } from '@material-ui/core';
+import './style.scss'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -109,7 +110,7 @@ class RingRoom extends React.Component {
 
       navigator.mediaDevices.getUserMedia({
         audio: true,
-        video: true,
+        video: false,
       }).then(stream => {
         // Display your local video in #localVideo element
         localVideo.srcObject = stream;
@@ -185,6 +186,10 @@ class RingRoom extends React.Component {
 
         <video id="localVideo" autoPlay muted></video>
         <video id="remoteVideo" autoPlay></video>
+
+        <div className="call-animation">
+
+        </div>
       </div>
     )
   }
